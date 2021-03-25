@@ -5,6 +5,7 @@ import Footer from './Footer.js';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
 import placeholderImageGM from "./Images/GM.jpg";
+import leul from "./Images/GM.jpg";
 
 
 function About(){
@@ -48,7 +49,7 @@ function About(){
                 </Col>
             </Row>
             <Row className="body-row body-row-member">
-                <Col><div><Image src={placeholderImageGM} className="member-img" /></div></Col>
+                <Col><div><Image src={leul} className="member-img" /></div></Col>
                  <Col className="member-info LeulName">
                     <h3><strong>Leul Endashaw</strong></h3>
                     <h5>Team Member</h5>
@@ -58,7 +59,7 @@ function About(){
             <Row className="body-row body-row-member">
                 <Col ><div><Image src={placeholderImageGM} className="member-img" /></div></Col>
                 <Col className="member-info">
-                   <div className='PhuongName'> <h3><strong>Phuong Nguyen</strong></h3></div>
+                   <div className='PhuongName'> <h3><strong>Sai Krupa Bariki Vidura: Development Team</strong></h3></div>
                     <h5>Team Member</h5>
                     <p>Text</p>
                 </Col>
