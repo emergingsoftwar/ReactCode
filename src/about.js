@@ -6,6 +6,8 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 
 import placeholderImageGM from "./Images/GM.jpg";
 import leul from "./Images/GM.jpg";
+import TKB from "./Images/TKB.jpg";
+import placeholderImageKrupa from './Images/Krupa.jpeg';
 
 
 function About(){
@@ -25,19 +27,19 @@ function About(){
              <Col className="section-title OS_Title"><h2>OUR STORY</h2></Col>
             </Row>
             <Row className="body-row">
-             <Col className="section-content Our-Story"><p>The GMatch team is comprised of four unique individuals with a common goal: creating a platform to help players find their team. With GMatch, you can match with gamers with similar interests and skill level. GMatch is the premier site to match gamers all over the world and is the perfect haven for locating your ideal team.
+             <Col className="section-content Our-Story"><p>The LetsGame team is comprised of four unique individuals with a common goal: creating a platform to help players find their team. With LetsGame, you can match with gamers with similar interests and skill level. LetsGame is the premier site to match gamers all over the world and is the perfect haven for locating your ideal team.
                                                     Upon seeing first-hand how difficult it can be to find teammates for online games, we began developing this app to help gamers globally and to fill a sector of the gaming world that's missing. 
-                                                    Use GMatch to find players who are in search of teammates with similar skill sets, tendencies, and attitudes. Our team wants to help you find your team.</p></Col>
+                                                    Use LetsGame to find players who are in search of teammates with similar skill sets, tendencies, and attitudes. Our team wants to help you find your team.</p></Col>
             </Row>
             <Row className="body-row">
                <Col className="section-title teamTitle"><h2>MEET THE TEAM MEMBERS</h2></Col>
             </Row>
             <Row className="body-row body-row-member">
-                <Col><div><Image src={placeholderImageGM} className="member-img" /></div></Col>
+                <Col><div><Image src={placeholderImageKrupa} className="member-img" /></div></Col>
                 <Col className="member-info ChristyName">
-                    <h3><strong>Christy Neal</strong></h3>
-                    <h5>Team Leader</h5>
-                    <p></p>
+                    <h3><strong>Sai Krupa Bariki Vidura</strong></h3>
+                    <h5>Developer</h5>
+                    <p>Pursuing Masters in Software Engineering at Kennesaw State University. Technology enthusiast and interested in software development and programming</p>
                 </Col>
             </Row>
             <Row className="body-row body-row-member">
@@ -57,11 +59,12 @@ function About(){
                 </Col>
             </Row>
             <Row className="body-row body-row-member">
-                <Col ><div><Image src={placeholderImageGM} className="member-img" /></div></Col>
+                <Col ><div><Image src= {TKB} className="member-img" /></div></Col>
                 <Col className="member-info">
                    <div className='PhuongName'> <h3><strong>Sai Krupa Bariki Vidura: Development Team</strong></h3></div>
+                   <div className='PhuongName'> <h3><strong>Terry Boyett</strong></h3></div>
                     <h5>Team Member</h5>
-                    <p>Text</p>
+                    <p>Valdosta State University gradute, Software Engineering gradute student at Kennesaw State University.</p>
                 </Col>
             </Row>
             <Footer />

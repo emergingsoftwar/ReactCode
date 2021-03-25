@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import placeholderImageLogo from "./Images/G.png";
+import logo from "./Images/LetsGameLogo.png";
 import placeholderImageFB from "./Images/fb.png";
 import placeholderImageIS from "./Images/insta.png";
 import placeholderImageLI from "./Images/linkedIn.png";
@@ -10,7 +10,7 @@ function Footer(){
     return(
         <Row className="footer-con">
             <Row className="footer-header">
-                <Col><a href="/"><Image src={placeholderImageLogo} className="logo-image"/></a></Col>
+                <Col><a href="/"><Image src={logo} className="logo-image"/></a></Col>
             </Row>
             <Row className="footer-navigation">
               <Col className="footer-navigation-col FooterHome"><h5><a href="/" className="anchor"><div className='FooterHome'>Home</div></a><span className="separation"></span></h5></Col>

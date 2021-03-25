@@ -1,4 +1,16 @@
-# Getting Started with Create React App
+# Gaming Behavioral Matchmaking System
+## Team Name: ES 2021
+### Team Members:             
+Leul Endashaw:                  Product Owner<br/>
+Gopi Macha:                     Scrum Master<br/>
+Sai Krupa Bariki Vidura:        Development Team<br/>
+Terry Boyett:                   Development Team<br/>
+
+## Sprint1 Documentation
+(https://github.com/emergingsoftwar/documents)<br/>
+(https://github.com/emergingsoftwar/documents/tree/main/Sprint%201)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

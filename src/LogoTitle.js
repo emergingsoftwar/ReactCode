@@ -1,11 +1,11 @@
 import React from 'react';
 import { Image, Row, Col } from 'react-bootstrap';
-import placeholderImageLogo from "./Images/G.png";
+import LetsGame from "./Images/LetsGameLogo.png";
 
 function LogoTitle(){
     return(
         <Row>
-            <Col><Image src={placeholderImageLogo} className="logo-title" /></Col>
+            <Col><Image src={LetsGame} className="logo-title" /></Col>
         </Row>
     )
 }
