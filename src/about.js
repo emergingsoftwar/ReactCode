@@ -6,6 +6,7 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 
 import placeholderImageGM from "./Images/GM.jpg";
 import TKB from "./Images/TKB.jpg";
+import placeholderImageKrupa from './Images/Krupa.jpeg';
 
 
 function About(){
@@ -33,11 +34,11 @@ function About(){
                <Col className="section-title teamTitle"><h2>MEET THE TEAM MEMBERS</h2></Col>
             </Row>
             <Row className="body-row body-row-member">
-                <Col><div><Image src={placeholderImageGM} className="member-img" /></div></Col>
+                <Col><div><Image src={placeholderImageKrupa} className="member-img" /></div></Col>
                 <Col className="member-info ChristyName">
-                    <h3><strong>Christy Neal</strong></h3>
-                    <h5>Team Leader</h5>
-                    <p></p>
+                    <h3><strong>Sai Krupa Bariki Vidura</strong></h3>
+                    <h5>Developer</h5>
+                    <p>Pursuing Masters in Software Engineering at Kennesaw State University. Technology enthusiast and interested in software development and programming</p>
                 </Col>
             </Row>
             <Row className="body-row body-row-member">
