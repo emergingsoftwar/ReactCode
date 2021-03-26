@@ -3,8 +3,9 @@ import './App.css';
 import axios from 'axios';
 import Footer from './Footer.js';
 import photo from './video1.jpg'
-import time from './Images/Time.jfif'
+import time from './Images/timenew.jpg'
 import quality from './Images/quality.jpg'
+import data from './Images/data.jpg'
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
 // import { browserHistory } from 'react-router';
@@ -41,7 +42,7 @@ function Home(){
             <div style={{height:"624px",position:"relative"}}>
             <div style={{transform:'translatey(300px)'}}>
         <div className='Line1'> <h1>The Ultimate Destination</h1></div>
-<div className= 'Line2'> <h1>For Gamers Match Making</h1></div>
+<div className= 'Line2'> <h1>For Call of Duty Players Match Making</h1></div>
                <div className='getStartedButton'>  <button>Get Started</button></div>
             </div>
             <div  className="image" style={{ backgroundImage: `url(${photo})`}}></div>
@@ -78,7 +79,7 @@ function Home(){
             </div>
             <h3>Time</h3>
 <div>
-    <p>Save time by finding connections in a convenient location. GMatch provides all the information you need to connect to other users. GMatch allows you to find your matches quickly by allowing you to sort the data and add friends</p>
+    <p>Save time by finding connections in a convenient location. Let'sGame provides all the information you need to connect to other users. Let'sGame allows you to find your matches quickly by allowing you to sort the data and add friends</p>
 </div>
             </Col>
             <Col md="3" className="inside">
@@ -93,14 +94,14 @@ function Home(){
             </div>
             <h3>Quality</h3>
 <div>
-    <p>In this unique experience, find connections through GMatch, the highest quality matching website for gamers out there. On this sleek application, you can find the best connections in a simple, high-quality space.</p>
+    <p>In this unique experience, find connections through Let'sGame, the highest quality matching website for gamers out there. On this sleek application, you can find the best connections in a simple, high-quality space.</p>
 </div>
             </Col>
             <Col md="3" className="inside">
             <div className="Highlight">
                 <div className="HighlightIconInner"> 
 <div>
-    <img src={photo} />
+    <img src={data} />
     {/* <p>benifit1</p> */}
 </div>
 
@@ -108,7 +109,7 @@ function Home(){
             </div>
             <h3>Forefront</h3>
 <div>
-    <p>Always have the latest, up-to-date information. GMatch will provide you with the current statistics and information, along with displaying them clearly. By using the latest data, we ensure that you will have the best options available and not have to worry that your results are outdated.</p>
+    <p>Always have the latest, up-to-date information. Let'sGame will provide you with the current statistics and information, along with displaying them clearly. By using the latest data, we ensure that you will have the best options available and not have to worry that your results are outdated.</p>
 </div>
             </Col>
         </Col>

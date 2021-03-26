@@ -64,10 +64,10 @@ test("render 'Our Story' title", () => {
   expect(wrapper.find('.OS_Title h2').text()).toContain("OUR STORY");
 });
 // Test #10
-test("render 'Our Story' text", () => {
-  const wrapper = shallow(<About/>);
-  expect(wrapper.find('.Our-Story p').text()).toContain("The GMatch team is comprised of four unique individuals with a common goal:");
-});
+// test("render 'Our Story' text", () => {
+//   const wrapper = shallow(<About/>);
+//   expect(wrapper.find('.Our-Story p').text()).toContain("The Let'sGame team is comprised of four unique individuals with a common goal:");
+// });
 // Test #11
 test("render 'How It Works' title", () => {
   const wrapper = shallow(<HowItWorks/>);
@@ -86,7 +86,7 @@ test("render team member - Gopi", () => {
 // Test #14
 test("render team member - Phuong", () => {
   const wrapper = shallow(<About/>);
-  expect(wrapper.find('.PhuongName h3').text()).toContain("Phuong Nguyen");
+  expect(wrapper.find('.SaiName h3').text()).toContain("Sai Krupa Bariki Vidura");
 });
 // Test #15
 test("render team member - Leul", () => {
@@ -96,7 +96,7 @@ test("render team member - Leul", () => {
 // Test 16
 test("render team member - Christy", () => {
   const wrapper = shallow(<About/>);
-  expect(wrapper.find('.ChristyName h3').text()).toContain("Christy Neal");
+  expect(wrapper.find('.TerryName h3').text()).toContain("Terry Boyett");
 });
 // Test 17 
 test("render how it works description", () => {
@@ -106,21 +106,21 @@ test("render how it works description", () => {
 // Test 18
 test("render Christy Description", () => {
   const wrapper = shallow(<About/>);
-  expect(wrapper.find('.ChristyName h5').text()).toContain("Team Leader");
+  expect(wrapper.find('.TerryName h5').text()).toContain("Development Team");
 });
 // Test 19
 test("render Line2 of home", () => {
   const wrapper = shallow(<Home/>);
-  expect(wrapper.find('.Line2 h1').text()).toContain("For Gamers Match Making");
+  expect(wrapper.find('.Line2 h1').text()).toContain("For Call of Duty Players Match Making");
 });
 // Test 20
 test("render Leul Description", () => {
   const wrapper = shallow(<About/>);
-  expect(wrapper.find('.LeulName h5').text()).toContain("Team Member");
+  expect(wrapper.find('.LeulName h5').text()).toContain("Product Owner");
 });
 // Test 21
 test("render Gopi Description", () => {
   const wrapper = shallow(<About/>);
-  expect(wrapper.find('.GopiName h5').text()).toContain("Team Member");
+  expect(wrapper.find('.GopiName h5').text()).toContain("Scrum Master");
 });
   })

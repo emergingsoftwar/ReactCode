@@ -5,7 +5,7 @@ import Footer from './Footer.js';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
 import placeholderImageGM from "./Images/GM.jpg";
-import leul from "./Images/GM.jpg";
+import leul from "./Images/LE.png";
 import TKB from "./Images/TKB.jpg";
 import placeholderImageKrupa from './Images/Krupa.jpeg';
 
@@ -14,7 +14,7 @@ function About(){
     return(
         <Container fluid class="con">
             <LogoTitle />
-            <Row>
+            <Row style={{marginTop:"10px"}}>
                 <Col className="page-title"><h1>About Us</h1></Col>
             </Row>
             <Row className="body-row">
@@ -35,35 +35,37 @@ function About(){
                <Col className="section-title teamTitle"><h2>MEET THE TEAM MEMBERS</h2></Col>
             </Row>
             <Row className="body-row body-row-member">
-                <Col><div><Image src={placeholderImageKrupa} className="member-img" /></div></Col>
-                <Col className="member-info ChristyName">
-                    <h3><strong>Sai Krupa Bariki Vidura</strong></h3>
-                    <h5>Developer</h5>
-                    <p>Pursuing Masters in Software Engineering at Kennesaw State University. Technology enthusiast and interested in software development and programming</p>
+                <Col><div><Image src={leul} className="member-img" /></div></Col>
+                 <Col className="member-info LeulName">
+                    <h3><strong>Leul Endashaw</strong></h3>
+                    <h5>Product Owner</h5>
+                    <p>I’m a students at Kennesaw state university doing my masters in software engineering. I did my bachelors degree in computer science, which started me on this journey and encouraged me to pursue it more. I’m currently working in this game matching project which has thought me a lot and gave me a chance to collaborate with my team mates.</p>
                 </Col>
             </Row>
             <Row className="body-row body-row-member">
                 <Col><div><Image src={placeholderImageGM} className="member-img" /></div></Col>
                 <Col className="member-info GopiName">
                     <h3><strong>Gopi Macha</strong></h3>
-                    <h5>Team Member</h5>
+                    <h5>Scrum Master</h5>
                     <p>Gopi is currently a graduate student at Kennesaw State University.He had Two Years experience in Software field.Mainly with Front-end part of the applications. </p>
                 </Col>
             </Row>
             <Row className="body-row body-row-member">
-                <Col><div><Image src={leul} className="member-img" /></div></Col>
-                 <Col className="member-info LeulName">
-                    <h3><strong>Leul Endashaw</strong></h3>
-                    <h5>Team Member</h5>
-                    <p></p>
+                <Col><div><Image src={placeholderImageKrupa} className="member-img" /></div></Col>
+                <Col className="member-info SaiName">
+                    <h3><strong>Sai Krupa Bariki Vidura</strong></h3>
+                    <h5>Development Team</h5>
+                    <p>Pursuing Masters in Software Engineering at Kennesaw State University. Technology enthusiast and interested in software development and programming</p>
                 </Col>
             </Row>
+        
+       
             <Row className="body-row body-row-member">
                 <Col ><div><Image src= {TKB} className="member-img" /></div></Col>
-                <Col className="member-info">
-                   <div className='PhuongName'> <h3><strong>Sai Krupa Bariki Vidura: Development Team</strong></h3></div>
-                   <div className='PhuongName'> <h3><strong>Terry Boyett</strong></h3></div>
-                    <h5>Team Member</h5>
+                <Col className="member-info TerryName">
+                  
+                <h3><strong>Terry Boyett</strong></h3>
+                    <h5>Development Team</h5>
                     <p>Valdosta State University gradute, Software Engineering gradute student at Kennesaw State University.</p>
                 </Col>
             </Row>
