@@ -1,6 +1,6 @@
 # Gaming Behavioral Matchmaking System
 ## Working Prototype
-Prototype URL: https://ksuletsgame.azurewebsites.net/about
+Prototype URL: https://ksuletsgame.azurewebsites.net/
 
 ## Team Name: ES 2021
 ### Team Members:             
