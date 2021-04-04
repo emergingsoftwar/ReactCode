@@ -4,8 +4,10 @@ import About from './About';
 import Footer from './Footer';
 import HowItWorks from './howItWorks';
 import Home from './home';
-
-import {shallow} from 'enzyme';
+import React from 'react';
+import {shallow,configure} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+configure({adapter: new Adapter()});
 
 describe("testing", () =>{
   //  Test #1
