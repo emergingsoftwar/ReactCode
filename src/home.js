@@ -14,7 +14,13 @@ import { useHistory } from "react-router-dom";
 
 function Home(){
     const history = useHistory();
-    
+    function handleClick() {
+        history.push(
+            {
+                pathname:"/start",
+                // state:{detail:response.data}
+        });
+    }
         // const options = {
         //     method: 'GET',
         //     url: 'https://api.pubg.com/shards/pc-na/leaderboards/division.bro.official.console-03/squad',
@@ -43,7 +49,7 @@ function Home(){
             <div style={{transform:'translatey(300px)'}}>
         <div className='Line1'> <h1>The Ultimate Destination</h1></div>
 <div className= 'Line2'> <h1>For Call of Duty Players Match Making</h1></div>
-               <div className='getStartedButton'>  <button>Get Started</button></div>
+               <div className='getStartedButton'>  <button onClick={handleClick}>Get Started</button></div>
             </div>
             <div  className="image" style={{ backgroundImage: `url(${photo})`}}></div>
             </div>

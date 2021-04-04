@@ -1,10 +1,17 @@
 import React,{Component, useState, useEffect} from "react"
 import Profile from './profile.js'
+import LogoTitle from './LogoTitle.js'
+import Footer from './Footer.js'
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import { Paginator } from 'primereact/paginator';
+
 import { Button } from 'primereact/button';
+import "primeicons/primeicons.css";
+import "primereact/resources/themes/saga-blue/theme.css"
+import "primereact/resources/primereact.css";
+import placeholderImageLogo from "./Images/G.png";
+// import "primeflex/primeflex.css";js
 
 import {
   BrowserRouter as Router,
@@ -25,6 +32,7 @@ function Started() {
  const [friendnotclicked,setno]=useState(true)
   let data=[]
   let or=[]
+  
   // let count=1;
   // state= {
   //   callofduty:[],
@@ -63,9 +71,16 @@ function Started() {
                         playerName:ele.username,
                         level:ele.values.level,
                         name:'AddFriend',
+                        addDisable:false,
+                        removeDisable:false,
+                        color: '#75868b',
                         timeplayed:ele.values.timePlayed,
-                        wins:ele.values.wins
-    
+                        wins:ele.values.wins,
+                        kills: ele.values.kills,
+                        killstreak: ele.values.killstreak,
+                        assists: ele.values.assists,
+                        headshots: ele.values.headshots,
+                        misses: ele.values.misses
                     })
                    
                 })
@@ -110,14 +125,24 @@ function Started() {
     function addButton(rowData){
       // console.log(rowData)
       return <div>
-        {friendnotclicked && <button onClick={(event) => buttonClick(rowData)}>{rowData.name}</button>}
+        {friendnotclicked && <button disabled={rowData.addDisable} style={{backgroundColor: rowData.color}} onClick={(event) => buttonClick(rowData)} >{rowData.name}</button>}
     
-  {!friendnotclicked && <button onClick={(event) => removeClick(rowData)}>Remove Friend</button>}
+        {!friendnotclicked && <button onClick={(event) => removeClick(rowData)}>Remove Friend</button>}
      
       
       </div>
     }
    function buttonClick(rowdata){
+      
+  call.map((item, index)=>{
+       if(rowdata.playerName==item.playerName){
+       item.addDisable=true;
+       item.color='#530102';
+       item.name='Added'
+      }
+     })
+     console.log(call)
+    //  setCall(old => [...old, ...data]);
 // console.log(rowdata)
 let array=[rowdata]
 setFriend(old => [...old, ...array]);
@@ -165,41 +190,65 @@ console.log(friend)
     setCall(friend)
     console.log(call)
    }
+
    const paginatorLeft = <Button type="button" icon="pi pi-refresh" className="p-button-text" />;
     const paginatorRight = <Button type="button" icon="pi pi-cloud" className="p-button-text" />;
+    const cols = [
+      { field: 'playerName', header: 'Name' },
+      { field: 'rank', header: 'Rank' },
+      { field: 'level', header: 'Level' },
+      { field: 'timeplayed', header: 'Time-Played' },
+      { field: 'wins', header: 'Wins' }
+  ];
+
+  const exportColumns = cols.map(col => ({ title: col.header, dataKey: col.field }));
+
+
     return (
       <div>
-     <Container>
-       <Row style={{display: 'flex'}}>
-         <Col lg={3} style={{minHeight:'100%'}}>
-         <div style={{height:'100%',marginTop:'100px'}}>
-         <button  value="Change value" onClick={friendsList} >Friends List </button> 
-        </div>
-         </Col>
-         <Col lg={9}>
-         <div className="card">
-          {/* {!this.state.started &&  */}
-           <DataTable value={call} >
-           
-           <Column field="playerName" header="Name" body={dateTemplate} filter filterPlaceholder="Search by name"></Column>
-               <Column field="rank" header="Rank"  filter filterPlaceholder="Search by rank"></Column>
-              
-               <Column field="level" header="level" filter filterPlaceholder="Search by level"></Column>
-               <Column field="timeplayed" header="timePlayed" filter filterPlaceholder="Search by time"></Column>
-               <Column field="wins" header="wins" filter filterPlaceholder="Search by wins"></Column>
-               <Column field="name" header="Actions" body={addButton}></Column>
-               
-               {/* <Column field="quantity" header="Quantity"></Column> */}
-           </DataTable>
-           {friendnotclicked && <div onClick={showmoredata}>showmore</div>}
-             
-           {/* <Paginator first={1} rows={4} ></Paginator> */}
-          {/* } */}
-               
+           {/* <div className="p-d-flex export-buttons">
+           <Button type="button" icon="pi pi-file-pdf" onClick={exportPdf} className="p-button-warning p-mr-2 pdf" data-pr-tooltip="PDF" />
+           </div> */}
+         {/* <Tooltip target=".export-buttons>button" position="bottom" /> */}
+     <Container fluid className="get-started-con">
+     <Row>
+            <Col>
+            <div className="game-name-div">
+            { friend[0]!=null && <button  value="Change value" onClick={friendsList} className="game-name-button">Friends List</button> }
+          </div>
+            <a href="/"><Image src={placeholderImageLogo} className="logo-title" /></a></Col>
+        </Row>
+      
+       
+   
+        <Row className="get-started-row">
+    
+          <Col className="game-data-board">
+          <div className="card">
+            {/* {!this.state.started &&  */}
+            <DataTable value={call} >
+            
+            <Column field="playerName" header="Name" body={dateTemplate} filter filterPlaceholder="Search by name" className="column-name styho"></Column>
+                <Column field="rank" header="Rank"  filter filterPlaceholder="Search by rank" className="column-rank styho"></Column>
                 
-</div>
-         </Col>
-       </Row>
+                <Column field="level" header="Level" filter filterPlaceholder="Search by level" className="column-level styho"></Column>
+                <Column field="timeplayed" header="Time-Played" filter filterPlaceholder="Search by time" className="column-timeplay styho"></Column>
+                <Column field="wins" header="Wins" filter filterPlaceholder="Search by wins" className="column-wins styho"></Column>
+                <Column field="name" header="Actions" body={addButton} className="column-actions"></Column>
+                
+                {/* <Column field="quantity" header="Quantity"></Column> */}
+            </DataTable>
+            {friendnotclicked && <div style={{marginTop:"10px"}}><button  className="show-more-button" onClick={showmoredata}>Show More</button></div>}
+              
+            {/* <Paginator first={1} rows={4} ></Paginator> */}
+            {/* } */}
+                
+                  
+          </div>
+          </Col>
+        </Row>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> 
+        <Footer />
      </Container>
         {/* <Route exact path="/Profile">
               <Profile/>

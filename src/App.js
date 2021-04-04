@@ -10,6 +10,7 @@ import Home from './home'
 import About from './about';
 import HowItWorks from './howItWorks.js';
 import Profile from './profile'
+import Started from './getstarted.js';
 
 function App() {
   return (
@@ -42,7 +43,9 @@ function App() {
             <Route path="/how-it-works">
               <HowItWorks />
             </Route>
-        
+            <Route path="/start">
+              <Started />
+            </Route>
             <Route path="/Profile">
               <Profile />
             </Route>
