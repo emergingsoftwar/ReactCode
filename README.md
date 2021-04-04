@@ -1,6 +1,6 @@
 # Gaming Behavioral Matchmaking System
 ## Working Prototype
-Prototype URL: https://ksuletsgame.azurewebsites.net/about
+Prototype URL: https://ksuletsgame.azurewebsites.net/
 
 ## Team Name: ES 2021
 ### Team Members:             
@@ -10,8 +10,11 @@ Sai Krupa Bariki Vidura:        Development Team<br/>
 Terry Boyett:                   Development Team<br/>
 
 ## Sprint1 Documentation
-(https://github.com/emergingsoftwar/documents)<br/>
-(https://github.com/emergingsoftwar/documents/tree/main/Sprint%201)
+https://github.com/emergingsoftwar/documents/tree/main/Sprint%201
+
+## Project Documentation
+https://github.com/emergingsoftwar/documents
+
 
 ## Getting Started with Create React App
 
