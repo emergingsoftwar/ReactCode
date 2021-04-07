@@ -46,7 +46,7 @@ test("render the team member section title", () => {
   // Test 6
   test("render footer text - About Us", ()=>{
     const wrapper = shallow(<Footer/>)
-    expect(wrapper.find('.FooterAU h5').text()).toContain("About Us");
+    expect(wrapper.find('.FooterAU h5').text()).toContain("ubout Us");
     });
 
 // Test #7
