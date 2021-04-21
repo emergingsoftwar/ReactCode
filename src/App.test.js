@@ -86,7 +86,7 @@ test("render team member - Gopi", () => {
   expect(wrapper.find('.GopiName h3').text()).toContain("Gopi Macha");
 });
 // Test #14
-test("render team member - Phuong", () => {
+test("render team member - Krupa", () => {
   const wrapper = shallow(<About/>);
   expect(wrapper.find('.SaiName h3').text()).toContain("Sai Krupa Bariki Vidura");
 });
@@ -96,7 +96,7 @@ test("render team member - Leul", () => {
   expect(wrapper.find('.LeulName h3').text()).toContain("Leul Endashaw");
 });
 // Test 16
-test("render team member - Christy", () => {
+test("render team member - Terry", () => {
   const wrapper = shallow(<About/>);
   expect(wrapper.find('.TerryName h3').text()).toContain("Terry Boyett");
 });
@@ -106,7 +106,7 @@ test("render how it works description", () => {
   expect(wrapper.find('.HIWDescription h3').text()).toContain("This is How It Works page");
 });
 // Test 18
-test("render Christy Description", () => {
+test("render Terry Description", () => {
   const wrapper = shallow(<About/>);
   expect(wrapper.find('.TerryName h5').text()).toContain("Development Team");
 });
@@ -125,4 +125,10 @@ test("render Gopi Description", () => {
   const wrapper = shallow(<About/>);
   expect(wrapper.find('.GopiName h5').text()).toContain("Scrum Master");
 });
+// Test 22
+test("render Krupa Description", () => {
+  const wrapper = shallow(<About/>);
+  expect(wrapper.find('.SaiName h5').text()).toContain("Development Team");
+});
+
   })
