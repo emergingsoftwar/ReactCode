@@ -36,16 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
 .navbar{
   min-height: 50px;
   z-index: 1;
   background: #fff;
-  margin-top: 0
+  margin-top: 0;
+  display: flex;
+  /* justify-content: flex-end; */
+  width: 100%;
+  display: flex;
+  position: relative;
+  /* right: -205px; */
+  justify-content: flex-end;
+  margin-bottom: 0px !important;
 }
 .navbar li{
   display:block;
-  float: left;
-  position: relative;
   text-decoration: none;
 }
 .navbar li a{
@@ -65,6 +72,12 @@
   text-transform: uppercase;
   font-size: 15px;
 }
+
+.logo-nav{
+  /* position: fixed; */
+  left: 10px;
+}
+
 .image{
   height: 100%;
   width: 100%;
@@ -77,6 +90,7 @@
   top:-21px;
   z-index: -1;
 }
+
 .inside{
   /* visibility: visible; */
   /* -webkit-animation-name: fadeInUp;
@@ -112,10 +126,15 @@
 .inside:hover{
   transform-origin: center;
     transform: scale(1.1);
+    cursor: default;
 }
 .navbar li a:hover{
-  background-color: black;
+  background-color: #530102;
   color: white;
+}
+
+.logo-nav:hover .logo-img{
+  background-color: white;
 }
 
 .home h1{
@@ -278,6 +297,12 @@ html, body{
 
 /***********Responsive with multiple devices**************/
 @media only screen and (min-width: 768px) {
+  .logo-nav{
+    left: 30px;
+  }
+  .navbar li:last-child{
+    margin-right: 30px;
+  }
   .body-row, .section-title, .section-content{
     padding-left: 50px;
     padding-right: 50px;
@@ -300,6 +325,13 @@ html, body{
 }
 
 @media only screen and (min-width: 992px) {
+  .logo-nav{
+    left: 50px;
+    margin-bottom: 10px;
+  }
+  .navbar li:last-child{
+    margin-right: 50px;
+  }
   .body-row, .section-title, .section-content{
     padding-left: 150px;
     padding-right: 150px;
@@ -316,10 +348,10 @@ html, body{
   }
 
   /******Footer******/
-  .logo-image{
+  /* .logo-image{
     padding-top: ;
     padding-bottom: ;
-  }
+  } */
   
   .footer-navigation{
     display: flex;
@@ -335,5 +367,31 @@ html, body{
   .separation::after{
     content: "\00a0\00a0\00a0\00a0\00a0|";
   }
+  .mobile{
+    display: block;
+  }
 }
 
+@media only screen and (max-width: 992px){
+  .mobile{
+    display: block !important;
+  }
+  .inside{
+    width: 210px
+  }
+  .game-name-div {
+    width: 40px !important;
+    height: 35px !important;
+  }
+  .game-name-board {
+    margin: 30px 20px 30px 5px !important;
+  }
+  .navbar li a{
+    font-size:9px;
+  }
+}
+/* .move{
+  display: flex;
+  flex-direction: column;
+  order: 2;
+} */

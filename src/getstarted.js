@@ -2,16 +2,17 @@ import React,{Component, useState, useEffect} from "react"
 import Profile from './profile.js'
 import LogoTitle from './LogoTitle.js'
 import Footer from './Footer.js'
+import './getstarted.css'
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-
+import logo from "./Images/LetsGameLogo.png";
 import { Button } from 'primereact/button';
 import "primeicons/primeicons.css";
 import "primereact/resources/themes/saga-blue/theme.css"
 import "primereact/resources/primereact.css";
-import placeholderImageLogo from "./Images/G.png";
-// import "primeflex/primeflex.css";js
+
+// import "primeflex/primeflex.css";
 
 import {
   BrowserRouter as Router,
@@ -202,8 +203,22 @@ console.log(friend)
   ];
 
   const exportColumns = cols.map(col => ({ title: col.header, dataKey: col.field }));
+    const exportPdf = () => {
+      import('jspdf').then(jsPDF => {
+          import('jspdf-autotable').then(() => {
+              const doc = new jsPDF.default(0, 0);
+              doc.autoTable(exportColumns, call);
+              doc.save('players.pdf');
+          })
+      })
+  }
+  const header = (
+    
 
+        <Button type="button" title="export toPDF" icon="pi pi-file-pdf" onClick={exportPdf} className="p-button-warning p-mr-2" data-pr-tooltip="PDF" />
+      
 
+);
     return (
       <div>
            {/* <div className="p-d-flex export-buttons">
@@ -216,7 +231,7 @@ console.log(friend)
             <div className="game-name-div">
             { friend[0]!=null && <button  value="Change value" onClick={friendsList} className="game-name-button">Friends List</button> }
           </div>
-            <a href="/"><Image src={placeholderImageLogo} className="logo-title" /></a></Col>
+            <a href="/"><Image src={logo} className="logo-title" /></a></Col>
         </Row>
       
        
@@ -226,7 +241,7 @@ console.log(friend)
           <Col className="game-data-board">
           <div className="card">
             {/* {!this.state.started &&  */}
-            <DataTable value={call} >
+            <DataTable value={call} header={!friendnotclicked?header:''}>
             
             <Column field="playerName" header="Name" body={dateTemplate} filter filterPlaceholder="Search by name" className="column-name styho"></Column>
                 <Column field="rank" header="Rank"  filter filterPlaceholder="Search by rank" className="column-rank styho"></Column>
