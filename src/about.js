@@ -66,7 +66,7 @@ function About(){
                   
                 <h3><strong>Terry Boyett</strong></h3>
                     <h5>Development Team</h5>
-                    <p>Valdosta State University gradute, Software Engineering gradute student at Kennesaw State University.</p>
+                    <p>Computer Science bachelors from Valdosta State University, Software Engineering gradute student at Kennesaw State University,interested in web and videogame programming. </p>
                 </Col>
             </Row>
             <Footer />
