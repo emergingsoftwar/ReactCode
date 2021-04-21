@@ -76,10 +76,10 @@ test("render 'How It Works' title", () => {
   expect(wrapper.find('h1').text()).toContain("How It Works");
 });
 // Test #12
-test("render 'How It Works' content", () => {
-  const wrapper = shallow(<HowItWorks/>);
-  expect(wrapper.find('h2').text()).toContain("***CONTENT***");
-});
+// test("render 'How It Works' content", () => {
+//   const wrapper = shallow(<HowItWorks/>);
+//   expect(wrapper.find('h2').text()).toContain("***CONTENT***");
+// });
 // Test #13
 test("render team member - Gopi", () => {
   const wrapper = shallow(<About/>);
@@ -101,10 +101,10 @@ test("render team member - Terry", () => {
   expect(wrapper.find('.TerryName h3').text()).toContain("Terry Boyett");
 });
 // Test 17 
-test("render how it works description", () => {
-  const wrapper = shallow(<HowItWorks/>);
-  expect(wrapper.find('.HIWDescription h3').text()).toContain("This is How It Works page");
-});
+// test("render how it works description", () => {
+//   const wrapper = shallow(<HowItWorks/>);
+//   expect(wrapper.find('.HIWDescription h3').text()).toContain("This is How It Works page");
+// });
 // Test 18
 test("render Terry Description", () => {
   const wrapper = shallow(<About/>);
