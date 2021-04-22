@@ -25,11 +25,7 @@ function Footer(){
                 <Col><a href="https://twitter.com/LetsGam38020362/status/1384994419070410764?s=20" target="_blank"><Image src={placeholderImageTW} className="media-img" /></a></Col>
             </Row>
             <Row className="copyright">
-<<<<<<< HEAD
-                <Col>@2021 Emerging Software Team#</Col>
-=======
                 <Col>@2021 Emerging Software Engineering Team#</Col>
->>>>>>> 4bc1defb11c73a2fb76b0ce36ef2b9940f99f725
             </Row>
         </Row>
     )
