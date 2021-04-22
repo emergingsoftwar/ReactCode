@@ -36,7 +36,7 @@ function App() {
               <Link to="/how-it-works">How It Works</Link>
             </li>
             <li className="move">
-              <a href="mailto:emergingsoftware173@gmail.com">Email Us</a> 
+              <a href="mailto:emergingsoftware173@gmail.com">Contact Us</a> 
             </li>
             {/* <li>
               <Link to="/start">Started</Link>
