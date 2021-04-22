@@ -20,7 +20,7 @@ function Footer(){
             <Row><div className="footer-line"></div></Row>
             <Row className="social-media">
                 <Col><a href=" https://www.instagram.com/" target="_blank"><Image src={placeholderImageIS} className="media-img" /></a></Col>
-                <Col><a href="https://www.facebook.com/" target="_blank"><Image src={placeholderImageFB} className="media-img" /></a></Col>
+                <Col><a href="https://www.facebook.com/letsgame.ksu/posts/109819027907966" target="_blank"><Image src={placeholderImageFB} className="media-img" /></a></Col>
                 <Col><a href="https://www.linkedin.com/feed/" target="_blank"><Image src={placeholderImageLI} className="media-img"/></a></Col>
                 <Col><a href="https://twitter.com/home" target="_blank"><Image src={placeholderImageTW} className="media-img" /></a></Col>
             </Row>
