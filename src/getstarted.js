@@ -5,13 +5,13 @@ import Footer from './Footer.js'
 import './getstarted.css'
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
-import { Container, Row, Col, Image } from 'react-bootstrap';
-import logo from "./Images/LetsGameLogo.png";
+import { Container, Row, Col, Image, Accordion, Card } from 'react-bootstrap';
+
 import { Button } from 'primereact/button';
 import "primeicons/primeicons.css";
 import "primereact/resources/themes/saga-blue/theme.css"
 import "primereact/resources/primereact.css";
-
+import placeholderImageLogo from "./Images/LetsGameLogo.png";
 // import "primeflex/primeflex.css";
 
 import {
@@ -118,11 +118,35 @@ function Started() {
       
       // console.log(this.state.callofduty)
       }
-       function dateTemplate(rowData, column) {
+       /*function dateTemplate(rowData, column) {
         return <div>
             <a  onClick={(event) => rowColumnClick(rowData)} >{rowData.playerName}</a>
         </div>;
+    }*/
+
+    function dateTemplate(rowData) {
+      return <div>
+          <Accordion>
+            <Card>
+              <Card.Header>
+                <Accordion.Toggle as={Link} variant="link" eventKey="0">
+                  {rowData.playerName}
+                </Accordion.Toggle>
+              </Card.Header>
+              <Accordion.Collapse eventKey="0">
+                <Card.Body>
+                  <h6>Kills: {rowData.kills}</h6>
+                  <h6>Kill Streak: {rowData.killstreak}</h6>
+                  <h6>Assists: {rowData.assists}</h6>
+                  <h6>Head Shots: {rowData.headshots}</h6>
+                  <h6>Misses: {rowData.misses}</h6>
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
+          </Accordion>
+      </div>;
     }
+
     function addButton(rowData){
       // console.log(rowData)
       return <div>
@@ -231,7 +255,7 @@ console.log(friend)
             <div className="game-name-div">
             { friend[0]!=null && <button  value="Change value" onClick={friendsList} className="game-name-button">Friends List</button> }
           </div>
-            <a href="/"><Image src={logo} className="logo-title" /></a></Col>
+            <a href="/"><Image src={placeholderImageLogo} className="logo-title" /></a></Col>
         </Row>
       
        
@@ -243,13 +267,13 @@ console.log(friend)
             {/* {!this.state.started &&  */}
             <DataTable value={call} header={!friendnotclicked?header:''}>
             
-            <Column field="playerName" header="Name" body={dateTemplate} filter filterPlaceholder="Search by name" className="column-name styho"></Column>
-                <Column field="rank" header="Rank"  filter filterPlaceholder="Search by rank" className="column-rank styho"></Column>
+            <Column field="playerName" header="Name" body={dateTemplate} filter filterPlaceholder="Search by name" className="column-name styho Name"></Column>
+                <Column field="rank" header="Rank"  filter filterPlaceholder="Search by rank" className="column-rank styho Rank"></Column>
                 
-                <Column field="level" header="Level" filter filterPlaceholder="Search by level" className="column-level styho"></Column>
-                <Column field="timeplayed" header="Time-Played" filter filterPlaceholder="Search by time" className="column-timeplay styho"></Column>
-                <Column field="wins" header="Wins" filter filterPlaceholder="Search by wins" className="column-wins styho"></Column>
-                <Column field="name" header="Actions" body={addButton} className="column-actions"></Column>
+                <Column field="level" header="Level" filter filterPlaceholder="Search by level" className="column-level styho level"></Column>
+                <Column field="timeplayed" header="Time-Played" filter filterPlaceholder="Search by time" className="column-timeplay styho timePlayed"></Column>
+                <Column field="wins" header="Wins" filter filterPlaceholder="Search by wins" className="column-wins styho Wins"></Column>
+                <Column field="name" header="Actions" body={addButton} className="column-actions action"></Column>
                 
                 {/* <Column field="quantity" header="Quantity"></Column> */}
             </DataTable>

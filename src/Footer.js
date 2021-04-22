@@ -9,9 +9,9 @@ import placeholderImageTW from "./Images/twitter2.png";
 function Footer(){
     return(
         <Row className="footer-con">
-            <Row className="footer-header">
+            {/* <Row className="footer-header">
                 <Col><a href="/"><Image src={logo} className="logo-image"/></a></Col>
-            </Row>
+            </Row> */}
             <Row className="footer-navigation">
               <Col className="footer-navigation-col FooterHome"><h5><a href="/" className="anchor"><div className='FooterHome'>Home</div></a><span className="separation"></span></h5></Col>
                 <Col className="footer-navigation-col FooterAU"><h5><a href="/about" className="anchor"><div className='FooterAU'>About Us</div></a><span className="separation"></span></h5></Col>
@@ -25,7 +25,7 @@ function Footer(){
                 <Col><a><Image src={placeholderImageTW} className="media-img" /></a></Col>
             </Row>
             <Row className="copyright">
-                <Col>@2021 Web Services Team#</Col>
+                <Col>@2021 Emerging Software Team#</Col>
             </Row>
         </Row>
     )
