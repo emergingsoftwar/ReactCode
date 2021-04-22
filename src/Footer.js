@@ -19,13 +19,17 @@ function Footer(){
             </Row>
             <Row><div className="footer-line"></div></Row>
             <Row className="social-media">
-                <Col><a><Image src={placeholderImageIS} className="media-img" /></a></Col>
-                <Col><a><Image src={placeholderImageFB} className="media-img" /></a></Col>
-                <Col><a><Image src={placeholderImageLI} className="media-img"/></a></Col>
-                <Col><a><Image src={placeholderImageTW} className="media-img" /></a></Col>
+                <Col><a href="https://www.instagram.com/p/CN9DgVZBO2-/?utm_source=ig_web_copy_link" target="_blank"><Image src={placeholderImageIS} className="media-img" /></a></Col>
+                <Col><a href="https://www.facebook.com/letsgame.ksu/posts/109819027907966" target="_blank"><Image src={placeholderImageFB} className="media-img" /></a></Col>
+                <Col><a href="https://www.linkedin.com/posts/letsgame-ksu-8a54a2210_playing-games-allows-an-escape-from-reality-activity-6790956551352971264-JjQG" target="_blank"><Image src={placeholderImageLI} className="media-img"/></a></Col>
+                <Col><a href="https://twitter.com/LetsGam38020362/status/1384994419070410764?s=20" target="_blank"><Image src={placeholderImageTW} className="media-img" /></a></Col>
             </Row>
             <Row className="copyright">
+<<<<<<< HEAD
                 <Col>@2021 Emerging Software Team#</Col>
+=======
+                <Col>@2021 Emerging Software Engineering Team#</Col>
+>>>>>>> 4bc1defb11c73a2fb76b0ce36ef2b9940f99f725
             </Row>
         </Row>
     )
