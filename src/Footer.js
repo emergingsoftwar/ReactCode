@@ -19,9 +19,9 @@ function Footer(){
             </Row>
             <Row><div className="footer-line"></div></Row>
             <Row className="social-media">
-                <Col><a href=" https://www.instagram.com/" target="_blank"><Image src={placeholderImageIS} className="media-img" /></a></Col>
+                <Col><a href="https://www.instagram.com/p/CN9DgVZBO2-/?utm_source=ig_web_copy_link" target="_blank"><Image src={placeholderImageIS} className="media-img" /></a></Col>
                 <Col><a href="https://www.facebook.com/letsgame.ksu/posts/109819027907966" target="_blank"><Image src={placeholderImageFB} className="media-img" /></a></Col>
-                <Col><a href="https://www.linkedin.com/feed/" target="_blank"><Image src={placeholderImageLI} className="media-img"/></a></Col>
+                <Col><a href="https://www.linkedin.com/posts/letsgame-ksu-8a54a2210_playing-games-allows-an-escape-from-reality-activity-6790956551352971264-JjQG" target="_blank"><Image src={placeholderImageLI} className="media-img"/></a></Col>
                 <Col><a href="https://twitter.com/home" target="_blank"><Image src={placeholderImageTW} className="media-img" /></a></Col>
             </Row>
             <Row className="copyright">
