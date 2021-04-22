@@ -19,13 +19,13 @@ function Footer(){
             </Row>
             <Row><div className="footer-line"></div></Row>
             <Row className="social-media">
-                <Col><a><Image src={placeholderImageIS} className="media-img" /></a></Col>
-                <Col><a><Image src={placeholderImageFB} className="media-img" /></a></Col>
-                <Col><a><Image src={placeholderImageLI} className="media-img"/></a></Col>
-                <Col><a><Image src={placeholderImageTW} className="media-img" /></a></Col>
+                <Col><a href=" https://www.instagram.com/" target="_blank"><Image src={placeholderImageIS} className="media-img" /></a></Col>
+                <Col><a href="https://www.facebook.com/" target="_blank"><Image src={placeholderImageFB} className="media-img" /></a></Col>
+                <Col><a href="https://www.linkedin.com/feed/" target="_blank"><Image src={placeholderImageLI} className="media-img"/></a></Col>
+                <Col><a href="https://twitter.com/home" target="_blank"><Image src={placeholderImageTW} className="media-img" /></a></Col>
             </Row>
             <Row className="copyright">
-                <Col>@2021 Web Services Team#</Col>
+                <Col>@2021 Emerging Software Engineering Team#</Col>
             </Row>
         </Row>
     )
