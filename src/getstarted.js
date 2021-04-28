@@ -146,7 +146,25 @@ function Started() {
           </Accordion>
       </div>;
     }
+    const cols = [
+      { field: 'playerName', header: 'Name' },
+      { field: 'rank', header: 'Rank' },
+      { field: 'level', header: 'Level' },
+      { field: 'timeplayed', header: 'Time-Played' },
+      { field: 'wins', header: 'Wins' }
+  ];
 
+const exportColumns = cols.map(col => ({ title: col.header, dataKey: col.field }));
+
+   function exportPdf() {
+      import('jspdf').then(jsPDF => {
+          import('jspdf-autotable').then(() => {
+              const doc = new jsPDF.default(0, 0);
+              doc.autoTable(exportColumns, call);
+              doc.save('players.pdf');
+          })
+      })
+  }
     function addButton(rowData){
       // console.log(rowData)
       return <div>
@@ -218,24 +236,7 @@ console.log(friend)
 
    const paginatorLeft = <Button type="button" icon="pi pi-refresh" className="p-button-text" />;
     const paginatorRight = <Button type="button" icon="pi pi-cloud" className="p-button-text" />;
-    const cols = [
-      { field: 'playerName', header: 'Name' },
-      { field: 'rank', header: 'Rank' },
-      { field: 'level', header: 'Level' },
-      { field: 'timeplayed', header: 'Time-Played' },
-      { field: 'wins', header: 'Wins' }
-  ];
 
-  const exportColumns = cols.map(col => ({ title: col.header, dataKey: col.field }));
-    const exportPdf = () => {
-      import('jspdf').then(jsPDF => {
-          import('jspdf-autotable').then(() => {
-              const doc = new jsPDF.default(0, 0);
-              doc.autoTable(exportColumns, call);
-              doc.save('players.pdf');
-          })
-      })
-  }
   const header = (
     
 

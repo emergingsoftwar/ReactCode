@@ -377,7 +377,13 @@ html, body{
     display: block !important;
   }
   .inside{
-    width: 210px
+    width: 250px;
+        display: inline-block;
+    align-items: center;
+    justify-content: center;
+  }
+  .rowin{
+    padding-left: 0px !important;
   }
   .game-name-div {
     width: 40px !important;

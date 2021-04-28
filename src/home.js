@@ -71,7 +71,7 @@ function Home(){
     
             <div>
 <Container center-block>
-    <Row style={{paddingLeft:"100px"}} >
+    <Row style={{paddingLeft:"100px"}} className="rowin">
         <Col lg={{ size: 10, offset: 1 }} md={{ size: 12, offset: 1 }} center-block>
             <Col  className="inside" md="3">
             <div className="Highlight">
