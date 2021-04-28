@@ -377,7 +377,7 @@ html, body{
     display: block !important;
   }
   .inside{
-    width: 250px;
+    width: 350px;
         display: inline-block;
     align-items: center;
     justify-content: center;
